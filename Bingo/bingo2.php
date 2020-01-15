@@ -38,8 +38,8 @@
 	
 	//Variables:
 	$njug=["Izhar","Ruben","Irene","Ana"];
-	$jugador=[""][0];
-	$contador=[""][0];
+	//$jugador=[""][0];
+	//$contador=[""][0];
 	$a=0;
 	$fin=false;
 	
