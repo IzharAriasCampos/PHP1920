@@ -39,6 +39,8 @@
 	//Variables:
 	$njug=["Izhar","Ruben","Irene","Ana"];
 	$a=0;
+	$jugador=[];
+	$contador=[];
 	$fin=false;
 	
 	//Funciones:
