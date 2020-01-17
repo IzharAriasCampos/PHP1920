@@ -72,7 +72,7 @@ function obtenerCategorias($db) {
 		return $categorias;
 	}
 	function crearProducto($db,$n,$p,$id,$cat){
-		$sql = "SELECT ID_CATEGORIA FROM CATEGORIA WHERE nombre='$cat'";
+		$sql = "SELECT ID_CATEGORIA FROM CATEGORIA WHERE NOMBRE='$cat'";
 		$resultado = mysqli_query($db,$sql);
 		if ($resultado){
 			$row = mysqli_fetch_assoc($resultado);
