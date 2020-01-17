@@ -61,7 +61,7 @@ if (!isset($_POST) || empty($_POST)) {
 function obtenerCategorias($db) {
 		$categorias = array();
 	
-		$sql = "SELECT ID_CATEGORIA, NOMBRE FROM categoria";
+		$sql = "SELECT ID_CATEGORIA, NOMBRE FROM CATEGORIA";
 	
 		$resultado = mysqli_query($db, $sql);
 		if ($resultado) {
@@ -72,11 +72,11 @@ function obtenerCategorias($db) {
 		return $categorias;
 	}
 	function crearProducto($db,$n,$p,$id,$cat){
-		$sql = "SELECT ID_CATEGORIA FROM categoria WHERE nombre='$cat'";
+		$sql = "SELECT ID_CATEGORIA FROM CATEGORIA WHERE nombre='$cat'";
 		$resultado = mysqli_query($db,$sql);
 		if ($resultado){
 			$row = mysqli_fetch_assoc($resultado);
-			$sql1 = "INSERT INTO producto (ID_PRODUCTO, NOMBRE, PRECIO, ID_CATEGORIA) VALUES ('$id','$n',$p,'".$row['ID_CATEGORIA']."')";
+			$sql1 = "INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, PRECIO, ID_CATEGORIA) VALUES ('$id','$n',$p,'".$row['ID_CATEGORIA']."')";
 			mysqli_query($db, $sql1);
 		}
 	}
