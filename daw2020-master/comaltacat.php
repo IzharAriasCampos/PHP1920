@@ -45,7 +45,7 @@ if (!isset($_POST) || empty($_POST)) {
 
 <?php
 	function altacategoria($id,$n,$db){
-		$sql="INSERT INTO categoria(ID_CATEGORIA, NOMBRE) VALUES ('$id','$n')";
+		$sql="INSERT INTO CATEGORIA (ID_CATEGORIA, NOMBRE) VALUES ('$id','$n')";
 		$resultado = mysqli_query($db,$sql);
 		if ($resultado){
 			mysqli_query($db, $sql);
